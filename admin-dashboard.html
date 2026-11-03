@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Admin Dashboard – VolunTrack</title><link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="layout">
+            <aside>
+
+                <div class="brand">
+                <i>💙</i>Volun<span>Track</span>
+                </div>
+
+                <nav><a href="admin-dashboard.html" class="on">📊 Dashboard</a><a href="manage-programs.html" class="">📅 Manage Programs</a>
+                    <a href="applications.html">📝 Applications</a>
+                    <a href="attendance.html">🗓️ Attendance</a>
+                </nav><a class="out" href="login.html">⎋ Logout</a>
+            </aside>
+            <main>
+                <div class="top"><h2>Dashboard</h2>
+                    <div class="who">
+                            <div class="av">AS</div>
+                    <div>Admin<small>Admin / Staff</small></div>
+                </div>
+        </div>
+
+<div class="hero">
+    <h3>Admin Dashboard</h3><p>You have 3 application(s) waiting for review.</p>
+</div>
+<!-- JSP: replace numbers with ${totalStudents}, ${totalPrograms}, ${pendingCount} from DashboardServlet -->
+<div class="stats s3">
+    <div class="st">
+        <div class="ic">🎓</div>
+        <div><b>250</b><span>Total Students</span></div>
+    </div>
+    
+    <div class="st">
+        <div class="ic">📅</div>
+        <div><b>8</b><span>Programs</span></div>
+    </div>
+    
+    <div class="st">
+        <div class="ic">⏳</div>
+        <div><b>3</b><span>Pending Applications</span></div>
+    </div>
+</div>
+
+<div class="g2">
+    <section class="card"><h3>Participants per Program</h3>
+        <div class="bar"><span>Community Clean-Up</span><i style="width:80%"></i><em>40</em></div>
+        <div class="bar"><span>Food Bank Distribution</span><i style="width:56%"></i><em>28</em></div>
+        <div class="bar"><span>Charity Visit</span><i style="width:50%"></i><em>25</em></div>
+        <div class="bar"><span>Tree Planting</span><i style="width:30%"></i><em>15</em></div>
+        <div class="bar"><span>Beach Cleanup</span><i style="width:20%"></i><em>10</em></div>
+    </section>
+    <section class="card">
+        <h3>Application Status</h3>
+        <div class="donut">
+            <div class="dn" style="background:conic-gradient(#16a34a 0 70%,#f59e0b 70% 85%,#dc2626 85% 100%)"><b>114</b></div>
+            <div class="lg"><div><i style="background:#16a34a"></i>Approved: 80</div>
+            <div><i style="background:#f59e0b"></i>Pending: 17</div>
+            <div><i style="background:#dc2626"></i>Rejected: 17</div>
+        </div>
+    </div>
+    </section>
+</div>
+
+<div class="g2">
+    <section class="card">
+        <div class="row" style="margin:0 0 10px;justify-content:space-between"><h3 style="margin:0">Pending Applications – Needs Review</h3><a href="applications.html">View all →</a></div>
+        <div class="tw"><table><tr><th>Student</th><th>Program</th><th></th></tr>
+<tr>
+    <td>
+        <div class="cell"><div class="av">AH</div>
+        <div>
+            <b>Ahmad Hakim</b>
+            <small>Applied 29 Oct</small>
+        </div>
+    </div>
+    </td>
+    <td>Community Clean-Up</td>
+    <td><a class="btn sm" href="applications.html">Review</a></td>
+</tr>
+
+<tr>
+    <td>
+        <div class="cell"><div class="av">NA</div>
+             <div><b>Nurul Aisyah</b><small>Applied 29 Oct</small></div>
+         </div>
+    </td>
+    <td>Tree Planting</td><td><a class="btn sm" href="applications.html">Review</a></td>
+</tr>
+<tr>
+    <td>
+        <div class="cell"><div class="av">AW</div>
+        <div><b>Amirul Wong</b><small>Applied 28 Oct</small></div>
+    </div></td><td>Community Clean-Up</td>
+    <td><a class="btn sm" href="applications.html">Review</a></td>
+</tr>
+
+</table>
+</div>
+
+</section>
+
+<section class="card">
+    <h3>Programs Needing Attention</h3>
+    <!-- JSP: programs where status=OPEN and (approved/quota ≥ 90% or deadline within 7 days), plus past programs with attendance_status = NOT_MARKED -->
+<div class="att">
+    <div class="row">
+        <div><b>Charity Visit</b><small style="display:block">25/25 volunteers · closes 25 Nov</small></div>
+        <span class="flag fr">Quota full</span></div><div class="prog full"><i style="width:100%"></i></div>
+    </div>
+    <div class="att">
+        <div class="row">
+            <div><b>Food Bank Distribution</b><small style="display:block">28/30 volunteers · closes 18 Nov</small>
+            </div><span class="flag fa">Almost full</span></div><div class="prog near"><i style="width:93%"></i></div>
+        </div>
+        <div class="att">
+            <div class="row"><div><b>Community Clean-Up</b><small style="display:block">40/50 volunteers · closes 10 Nov</small>
+        </div>
+        
+        <span class="flag fa">Closing soon</span>
+    </div><div class="prog "><i style="width:80%"></i></div>
+</div><div class="att">
+    <div class="row">
+        <div><b>Orphanage Visit</b><small style="display:block">Ended 12 Oct · 12 participants</small>
+        </div><span class="flag fb">Attendance not marked</span>
+    </div><a href="attendance.html" style="font-size:13px">Mark attendance →</a></div>
+</section>
+</div>
+</main>
+</div>
+</body>
+</html>
